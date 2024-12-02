@@ -1,0 +1,22 @@
+.cart-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.cart-summary {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-summary .total-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-checkout {
+    background-color: #28a745;
+    color: white;
+}
