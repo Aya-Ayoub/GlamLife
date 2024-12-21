@@ -48,8 +48,8 @@
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
-                                <img class="img-profile rounded-circle" src="img/admin.jpg">
+                                <!--<span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                                <img class="img-profile rounded-circle" src="img/admin.jpg">-->
                             </a>
                         </li>
                     </ul>
@@ -93,7 +93,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$conn = new mysqli("localhost", "Admin_Page", "202301062", "glamlife");
+$conn = new mysqli("localhost", "admin", "password", "glamlife");
 
 // Check connection
 if ($conn->connect_error) {

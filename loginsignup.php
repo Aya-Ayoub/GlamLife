@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
     if ($email == "admin@admin" && $password == "adminadmin") {
         session_start();
         // Redirect to the admin page
-        header("Location: admin_page.php");
+        header("Location: /GlamLife/GlamLife/Admin/products.php");
         exit();
     }
 
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
             session_start();
             $_SESSION['user_id'] = $user['User_ID'];
             // Redirect to homepage
-            header("Location: node_modules/startbootstrap-shop-homepage/dist/index3.php");
+            header("Location: node_modules\MainPages\dist\mainpages.php");
             exit();
         } else {
             // Incorrect password

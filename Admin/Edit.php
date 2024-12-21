@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "Admin_Page", "202301062", "glamlife");
+$conn = new mysqli("localhost", "admin", "password", "glamlife");
 session_start();
 
 // Check connection

@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "Admin_Page", "202301062", "glamlife");
+$conn = new mysqli("localhost", "admin", "password", "glamlife");
 session_start();
 if (empty($_SESSION['browser_opened'])) {
     shell_exec("start http://localhost/products.php");
@@ -35,6 +35,8 @@ $result = $conn->query($sql);
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="GlamLife\Admin\css\sb-admin-2.css" rel="stylesheet">
+    <link href="GlamLife\Admin\css\sb-admin-2.min.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -63,7 +65,7 @@ $result = $conn->query($sql);
                     <!-- Nav Item - User Information -->
                     <ul class="navbar-nav ml-auto"> <!-- Added ml-auto to align to the right -->
                         <li class="nav-item">
-                            <a class="nav-link" href="logout.php" onclick="return confirm('Are you sure you want to log out?');">
+                            <a class="nav-link" href="\GlamLife\GlamLife\loginsignup.php" onclick="return confirm('Are you sure you want to log out?');">
                                 <button class="btn btn-danger text-white">Logout</button>
                             </a>
                         </li>
@@ -138,14 +140,14 @@ $result = $conn->query($sql);
                 // Edit button
                     echo "<td>
                         <a href='edit.php?id=" . $row['Product_ID'] . "'>
-                         <img src='GlamLife/startbootstrap-sb-admin-2-gh-pages/img/edit.png' alt='Edit' width='20' style='cursor:pointer;'>
+                         <img src='startbootstrap-sb-admin-2-gh-pages\img\Edit.png' alt='Edit' width='20' style='cursor:pointer;'>
                         </a>
                     </td>";
         
         // Delete button
         echo "<td>
                 <a href='delete.php?id=" . $row['Product_ID'] . "' onclick='return confirm(\"Are you sure you want to delete this item?\");'>
-                    <img src='GlamLife/startbootstrap-sb-admin-2-gh-pages/img/delete.png' alt='Delete' width='20' style='cursor:pointer;'>
+                    <img src='startbootstrap-sb-admin-2-gh-pages\img\delete.png' alt='Delete' width='20' style='cursor:pointer;'>
                 </a>
               </td>";
         
@@ -196,7 +198,7 @@ $result = $conn->query($sql);
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="GlamLife\loginsignup.php">Logout</a>
                 </div>
             </div>
         </div>
