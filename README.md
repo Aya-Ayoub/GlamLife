@@ -1,3 +1,5 @@
+## GlamLife
+
 ## Team Structure
 
 ### Leadership
